@@ -1,0 +1,53 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.3fr;
+  gap: 30px 30px;
+  grid-auto-flow: row;
+  grid-template-areas: "ONE TWO THREE";
+  padding-top: 20%;
+}
+
+.ONE {
+  grid-area: ONE;
+}
+
+.TWO {
+  grid-area: TWO;
+}
+
+.THREE {
+  grid-area: THREE;
+}
+
+.ONE:hover {
+  transform: scale(1.5);
+}
+
+.TWO:hover {
+  transform: scale(1.5);
+}
+
+.THREE:hover {
+  transform: scale(1.5);
+}
+.ONE,
+.TWO,
+.THREE {
+  transition: transform 2s;
+}
+@media only screen and (max-width: 600px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    height: 100vh;
+
+    grid-template-areas:
+      "ONE"
+      "TWO"
+      "THREE";
+  }
+}
